@@ -838,7 +838,6 @@ var Slider = {
       if (this.fixed) e.stopPropagation();
     },
     syncValue: function syncValue(noCb) {
-      //test comment
       var val = this.isRange ? [].concat(this.val) : this.val;
       this.$emit('input', val);
       this.keydownFlag && this.$emit('on-keypress', val);
@@ -1324,7 +1323,6 @@ var Slider = {
     },
     refresh: function refresh() {
       if (this.$refs.elem) {
-        console.debug('vue-range-slider: refresh');
         this.getStaticData();
         this.computedFixedValue();
         this.setPosition();
