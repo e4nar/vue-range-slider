@@ -1254,7 +1254,7 @@
           me._start(e, 1);
         };
 
-        if (isMobile) {
+        if (isMobile && false) {
           addEvent(this.$refs.process, EVENT_TOUCH_START, this.processStartFn);
           addEvent(document, EVENT_TOUCH_MOVE, this._move);
           addEvent(document, EVENT_TOUCH_END, this._end);
@@ -1291,7 +1291,7 @@
         }
       },
       unbindEvents: function unbindEvents() {
-        if (isMobile) {
+        if (isMobile && false) {
           removeEvent(this.$refs.process, EVENT_TOUCH_START, this.processStartFn);
           removeEvent(document, EVENT_TOUCH_MOVE, this._move);
           removeEvent(document, EVENT_TOUCH_END, this._end);
@@ -1329,6 +1329,7 @@
       },
       refresh: function refresh() {
         if (this.$refs.elem) {
+          console.debug('vue-range-slider: refresh');
           this.getStaticData();
           this.computedFixedValue();
           this.setPosition();
