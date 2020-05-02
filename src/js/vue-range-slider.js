@@ -768,7 +768,7 @@ export default {
       if (this.fixed) e.stopPropagation()
     },
     syncValue(noCb) {
-      let val = this.isRange ? this.val.concat() : this.val
+      let val = this.isRange ? [].concat(this.val) : this.val
       this.$emit('input', val)
       this.keydownFlag && this.$emit('on-keypress', val)
       noCb || this.$emit('slide-end', val)

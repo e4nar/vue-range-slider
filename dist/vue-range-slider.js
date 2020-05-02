@@ -844,7 +844,7 @@
         if (this.fixed) e.stopPropagation();
       },
       syncValue: function syncValue(noCb) {
-        var val = this.isRange ? this.val.concat() : this.val;
+        var val = this.isRange ? [].concat(this.val) : this.val;
         this.$emit('input', val);
         this.keydownFlag && this.$emit('on-keypress', val);
         noCb || this.$emit('slide-end', val);
