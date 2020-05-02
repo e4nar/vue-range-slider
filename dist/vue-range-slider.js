@@ -844,6 +844,7 @@
         if (this.fixed) e.stopPropagation();
       },
       syncValue: function syncValue(noCb) {
+        //test comment
         var val = this.isRange ? [].concat(this.val) : this.val;
         this.$emit('input', val);
         this.keydownFlag && this.$emit('on-keypress', val);
